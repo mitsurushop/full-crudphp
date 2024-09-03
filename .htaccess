@@ -1,0 +1,21 @@
+# menyembunyikan list file/direktori
+Options -Indexes
+
+# menyembunyikan signature/tanda server
+ServerSignature Off
+
+# memblokir/membuka akses ip addres
+Order Allow,Deny
+    Allow from 127.0.0.1
+Allow from all
+
+# menghilangkan ekstensi file di url
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+# redirect/mengalihkan ke url lain
+# redirect /crud-php/mahasiswa.php https://mitsurushop.github.io/

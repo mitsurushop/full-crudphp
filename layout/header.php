@@ -31,6 +31,8 @@ include 'config/app.php';
   <link rel="stylesheet" href="assets-template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="assets-template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="assets-template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- jQuery -->
+<script src="assets-template/plugins/jquery/jquery.min.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -65,10 +67,11 @@ include 'config/app.php';
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="assets/img/foto.jpeg" class="img-circle elevation-2" alt="User Image">
+            <img src="assets/img/profil.jpg" class="img-circle elevation-2" alt="Admin Image">
         </div>
         <div class="info">
           <a href="#" class="d-block"><?= $_SESSION['nama']; ?></a>
+
         </div>
       </div>
 
@@ -96,6 +99,24 @@ include 'config/app.php';
           </li>
 
           <li class="nav-item">
+            <a href="pegawai.php" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Data Pegawai (Realtime)
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="email.php" class="nav-link">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Kirim Email (PHPMailer)
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="akun.php" class="nav-link">
               <i class="nav-icon fas fa-user-cog"></i>
               <p>
@@ -103,6 +124,7 @@ include 'config/app.php';
               </p>
             </a>
           </li>
+
 
           <li class="nav-item">
             <a href="logout.php" onclick="return confirm('Yakin ingin keluar ?')" class="nav-link">
